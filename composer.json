@@ -1,0 +1,27 @@
+{
+    "name": "midnightluke/php-units-of-measure-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle wrapper for the PHP Units of Measure library with useful doctrine and form types.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luke Bainbridge",
+            "email": "luke.bainbridge@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^5.5.9 || ^7.0",
+        "php-units-of-measure/php-units-of-measure": "^2.1",
+        "symfony/form-bundle": "^2.7 || ^3.0",
+        "symfony/framework-bundle": "^2.7 || ^3.0",
+        "doctrine/dbal": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MidnightLuke\\PhpUnitsOfMeasureBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
+}

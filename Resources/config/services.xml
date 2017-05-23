@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="midnight_luke_php_units_of_measure.form.type.length" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\LengthType">
+            <tag name="form.type" />
+        </service>
+        <service id="midnight_luke_php_units_of_measure.form.type.mass" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\MassType">
+            <tag name="form.type" />
+        </service>
+    </services>
+</container>
