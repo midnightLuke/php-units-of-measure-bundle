@@ -25,13 +25,15 @@ class MidnightLukePhpUnitsOfMeasureExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        // Set standard unit for form types.
-        $container
-            ->get('midnight_luke_php_units_of_measure.form.type.length')
-            ->setStandardUnit($config['base_units']['length']);
-        $container
-            ->get('midnight_luke_php_units_of_measure.form.type.mass')
-            ->setStandardUnit($config['base_units']['mass']);
+        // Set standard unit for form types as a service parameter.
+        $container->setParameter(
+            'units_of_measure.standard_units.length',
+            $config['base_units']['length']
+        );
+        $container->setParameter(
+            'units_of_measure.standard_units.mass',
+            $config['base_units']['mass']
+        );
 
         // Add doctrine types.
 

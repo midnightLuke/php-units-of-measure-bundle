@@ -13,7 +13,7 @@ class LengthType extends AbstractType
 {
     private $standard_unit;
 
-    public function setStandardUnit($standard_unit)
+    public function __construct($standard_unit)
     {
         $this->standard_unit = $standard_unit;
     }

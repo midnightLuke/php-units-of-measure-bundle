@@ -13,7 +13,7 @@ class MassType extends AbstractType
 {
     private $standard_unit;
 
-    public function setStandardUnit($standard_unit)
+    public function __contruct($standard_unit)
     {
         $this->standard_unit = $standard_unit;
     }
