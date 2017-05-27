@@ -4,11 +4,11 @@ namespace MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types;
 
 use PhpUnitsOfMeasure\PhysicalQuantity;
 
-class MassType extends AbstractPhysicalQuantityType
+class AccelerationType extends AbstractPhysicalQuantityType
 {
-    const UNIT_CLASS = PhysicalQuantity\Mass::class;
-    const STANDARD_UNIT = 'kg';
-    const TYPE_NAME = 'mass';
+    const UNIT_CLASS = PhysicalQuantity\Acceleration::class;
+    const STANDARD_UNIT = 'm/s²';
+    const TYPE_NAME = 'acceleration';
 
     /**
      * {@inheritdoc}

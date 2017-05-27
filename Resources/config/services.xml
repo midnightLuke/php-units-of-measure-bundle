@@ -4,12 +4,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="midnight_luke_php_units_of_measure.form.type.length" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\LengthType">
-            <argument>%units_of_measure.standard_units.length%</argument>
+        <service id="units_of_measure.form.type.acceleration" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\AccelerationType">
+            <argument></argument>
             <tag name="form.type" />
         </service>
-        <service id="midnight_luke_php_units_of_measure.form.type.mass" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\MassType">
-            <argument>%units_of_measure.standard_units.mass%</argument>
+        <service id="units_of_measure.form.type.length" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\LengthType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.mass" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\MassType">
+            <argument></argument>
             <tag name="form.type" />
         </service>
     </services>

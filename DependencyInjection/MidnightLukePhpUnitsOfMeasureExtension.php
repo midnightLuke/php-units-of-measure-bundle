@@ -2,19 +2,38 @@
 
 namespace MidnightLuke\PhpUnitsOfMeasureBundle\DependencyInjection;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\DependencyInjection\Loader;
 use Doctrine\DBAL\Types\Type;
+use MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types as DoctrineTypes;
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
+use Symfony\Component\DependencyInjection\Loader;
+use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
  * This is the class that loads and manages your bundle configuration.
  *
  * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class MidnightLukePhpUnitsOfMeasureExtension extends Extension
+class MidnightLukePhpUnitsOfMeasureExtension extends Extension implements PrependExtensionInterface
 {
+    private static $types = [
+        'mass' => DoctrineTypes\MassType::class,
+        'length' => DoctrineTypes\LengthType::class,
+        'acceleration' => DoctrineTypes\AccelerationType::class,
+    ];
+
+    public function prepend(ContainerBuilder $container)
+    {
+        foreach (self::$types as $name => $doctrine_class) {
+            if (Type::hasType($name)) {
+                Type::overrideType($name, $doctrine_class);
+            } else {
+                Type::addType($name, $doctrine_class);
+            }
+        }
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -26,18 +45,9 @@ class MidnightLukePhpUnitsOfMeasureExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        // Set standard unit for form types as a service parameter.
-        $container->setParameter(
-            'units_of_measure.standard_units.length',
-            $config['base_units']['length']
-        );
-        $container->setParameter(
-            'units_of_measure.standard_units.mass',
-            $config['base_units']['mass']
-        );
-
-        // Add doctrine types.
-        Type::addType('mass', 'MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\MassType');
-        Type::addType('length', 'MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\LengthType');
+        foreach (self::$types as $name => $doctrine_class) {
+            $def = $container->getDefinition('units_of_measure.form.type.' . $name);
+            $def->replaceArgument(0, $config['base_units'][$name]);
+        }
     }
 }

@@ -4,9 +4,9 @@ namespace MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type;
 
 use PhpUnitsOfMeasure\PhysicalQuantity;
 
-class MassType extends AbstractPhysicalQuantityType
+class AccelerationType extends AbstractPhysicalQuantityType
 {
-    const UNIT_CLASS = PhysicalQuantity\Mass::class;
+    const UNIT_CLASS = PhysicalQuantity\Acceleration::class;
 
     /**
      * {@inheritdoc}

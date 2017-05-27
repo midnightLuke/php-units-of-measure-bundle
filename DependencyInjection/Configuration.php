@@ -2,8 +2,6 @@
 
 namespace MidnightLuke\PhpUnitsOfMeasureBundle\DependencyInjection;
 
-use PhpUnitsOfMeasure\PhysicalQuantity\Length;
-use PhpUnitsOfMeasure\PhysicalQuantity\Mass;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -20,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('midnight_luke_php_units_of_measure');
+        $rootNode = $treeBuilder->root('units_of_measure');
 
         $rootNode
             ->children()
@@ -28,6 +26,7 @@ class Configuration implements ConfigurationInterface
                     ->children()
                         ->scalarNode('length')->defaultValue('cm')->end()
                         ->scalarNode('mass')->defaultValue('kg')->end()
+                        ->scalarNode('acceleration')->defaultValue('meters per second squared')->end()
                     ->end()
                 ->end()
             ->end();
