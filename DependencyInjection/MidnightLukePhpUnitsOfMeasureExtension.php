@@ -6,6 +6,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
+use Doctrine\DBAL\Types\Type;
 
 /**
  * This is the class that loads and manages your bundle configuration.
@@ -36,7 +37,7 @@ class MidnightLukePhpUnitsOfMeasureExtension extends Extension
         );
 
         // Add doctrine types.
-
-        // d($container->get('midnight_luke_php_units_of_measure.form.type.mass'));
+        Type::addType('mass', 'MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\MassType');
+        Type::addType('length', 'MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\LengthType');
     }
 }
