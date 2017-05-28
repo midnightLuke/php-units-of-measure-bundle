@@ -4,9 +4,9 @@ namespace MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type;
 
 use PhpUnitsOfMeasure\PhysicalQuantity;
 
-class LengthType extends AbstractPhysicalQuantityType
+class LuminousIntensityType extends AbstractPhysicalQuantityType
 {
-    const UNIT_CLASS = PhysicalQuantity\Length::class;
+    const UNIT_CLASS = PhysicalQuantity\LuminousIntensity::class;
 
     /**
      * {@inheritdoc}
