@@ -35,8 +35,10 @@ abstract class AbstractPhysicalQuantityType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $unit_class = $this->getUnitClass();
+
         // Create available choices for units.
-        $units = $this->getUnitClass()::getUnitDefinitions();
+        $units = $unit_class::getUnitDefinitions();
         $unit_choices = [];
         $standard_unit = $this->standard_unit;
         foreach ($units as $unit) {
@@ -64,8 +66,8 @@ abstract class AbstractPhysicalQuantityType extends AbstractType
                     'unit' => $standard_unit,
                 ];
             },
-            function ($value) {
-                return new $this->getUnitClass()($value['value'], $value['unit']);
+            function ($value) use ($unit_class) {
+                return new $unit_class($value['value'], $value['unit']);
             }
         ));
     }

@@ -13,6 +13,6 @@ class MassType extends AbstractPhysicalQuantityType
      */
     public function getUnitClass()
     {
-        return UNIT_CLASS;
+        return self::UNIT_CLASS;
     }
 }
