@@ -4,11 +4,11 @@ namespace MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types;
 
 use PhpUnitsOfMeasure\PhysicalQuantity;
 
-class LengthType extends AbstractPhysicalQuantityType
+class SolidAngleType extends AbstractPhysicalQuantityType
 {
-    const UNIT_CLASS = PhysicalQuantity\Length::class;
-    const STANDARD_UNIT = 'm';
-    const TYPE_NAME = 'length';
+    const UNIT_CLASS = PhysicalQuantity\SolidAngle::class;
+    const STANDARD_UNIT = 'sr';
+    const TYPE_NAME = 'solid_angle';
 
     /**
      * {@inheritdoc}

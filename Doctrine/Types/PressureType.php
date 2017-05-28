@@ -4,11 +4,11 @@ namespace MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types;
 
 use PhpUnitsOfMeasure\PhysicalQuantity;
 
-class LengthType extends AbstractPhysicalQuantityType
+class PressureType extends AbstractPhysicalQuantityType
 {
-    const UNIT_CLASS = PhysicalQuantity\Length::class;
-    const STANDARD_UNIT = 'm';
-    const TYPE_NAME = 'length';
+    const UNIT_CLASS = PhysicalQuantity\Pressure::class;
+    const STANDARD_UNIT = 'Pa';
+    const TYPE_NAME = 'pressure';
 
     /**
      * {@inheritdoc}

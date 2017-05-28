@@ -18,11 +18,26 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class MidnightLukePhpUnitsOfMeasureExtension extends Extension implements PrependExtensionInterface
 {
     private static $types = [
-        'mass' => DoctrineTypes\MassType::class,
-        'length' => DoctrineTypes\LengthType::class,
         'acceleration' => DoctrineTypes\AccelerationType::class,
+        'angle' => DoctrineTypes\AngleType::class,
+        'area' => DoctrineTypes\AreaType::class,
+        'electric_current' => DoctrineTypes\ElectricCurrentType::class,
+        'energy' => DoctrineTypes\EnergyType::class,
+        'length' => DoctrineTypes\LengthType::class,
+        'luminous_intensity' => DoctrineTypes\LuminousIntensityType::class,
+        'mass' => DoctrineTypes\MassType::class,
+        'pressure' => DoctrineTypes\PressureType::class,
+        'quantity' => DoctrineTypes\QuantityType::class,
+        'solid_angle' => DoctrineTypes\SolidAngleType::class,
+        'temperature' => DoctrineTypes\TemperatureType::class,
+        'time' => DoctrineTypes\TimeType::class,
+        'velocity' => DoctrineTypes\VelocityType::class,
+        'volume' => DoctrineTypes\VolumeType::class,
     ];
 
+    /**
+     * {@inheritdoc}
+     */
     public function prepend(ContainerBuilder $container)
     {
         foreach (self::$types as $name => $doctrine_class) {

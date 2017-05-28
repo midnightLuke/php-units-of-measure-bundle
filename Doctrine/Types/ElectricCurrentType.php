@@ -4,11 +4,11 @@ namespace MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types;
 
 use PhpUnitsOfMeasure\PhysicalQuantity;
 
-class LengthType extends AbstractPhysicalQuantityType
+class ElectricCurrentType extends AbstractPhysicalQuantityType
 {
-    const UNIT_CLASS = PhysicalQuantity\Length::class;
-    const STANDARD_UNIT = 'm';
-    const TYPE_NAME = 'length';
+    const UNIT_CLASS = PhysicalQuantity\ElectricCurrent::class;
+    const STANDARD_UNIT = 'A';
+    const TYPE_NAME = 'electric_current';
 
     /**
      * {@inheritdoc}

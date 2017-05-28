@@ -4,11 +4,11 @@ namespace MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types;
 
 use PhpUnitsOfMeasure\PhysicalQuantity;
 
-class LengthType extends AbstractPhysicalQuantityType
+class QuantityType extends AbstractPhysicalQuantityType
 {
-    const UNIT_CLASS = PhysicalQuantity\Length::class;
-    const STANDARD_UNIT = 'm';
-    const TYPE_NAME = 'length';
+    const UNIT_CLASS = PhysicalQuantity\Quantity::class;
+    const STANDARD_UNIT = 'mol';
+    const TYPE_NAME = 'quantity';
 
     /**
      * {@inheritdoc}

@@ -8,11 +8,59 @@
             <argument></argument>
             <tag name="form.type" />
         </service>
+        <service id="units_of_measure.form.type.angle" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\AngleType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.area" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\AreaType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.electric_current" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\ElectricCurrentType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.energy" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\EnergyType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
         <service id="units_of_measure.form.type.length" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\LengthType">
             <argument></argument>
             <tag name="form.type" />
         </service>
+        <service id="units_of_measure.form.type.luminous_intensity" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\LuminousIntensityType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
         <service id="units_of_measure.form.type.mass" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\MassType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.pressure" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\PressureType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.quantity" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\QuantityType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.solid_angle" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\SolidAngleType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.temperature" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\TemperatureType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.time" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\TimeType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.velocity" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\VelocityType">
+            <argument></argument>
+            <tag name="form.type" />
+        </service>
+        <service id="units_of_measure.form.type.volume" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\VolumeType">
             <argument></argument>
             <tag name="form.type" />
         </service>

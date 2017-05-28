@@ -7,7 +7,7 @@ use PhpUnitsOfMeasure\PhysicalQuantity;
 class AccelerationType extends AbstractPhysicalQuantityType
 {
     const UNIT_CLASS = PhysicalQuantity\Acceleration::class;
-    const STANDARD_UNIT = 'm/s²';
+    const STANDARD_UNIT = 'm/s^2';
     const TYPE_NAME = 'acceleration';
 
     /**
