@@ -84,3 +84,17 @@ $form = $this->createFormBuilder()
     ->add('save', SubmitType::class, array('label' => 'Create Post'))
     ->getForm();
 ```
+
+## About
+
+### Submitting bugs and feature requests
+
+Bugs and feature request are tracked on [GitHub](https://github.com/midnightLuke/php-units-of-measure-bundle/issues).
+
+### Author
+
+Luke Bainbridge - http://twitter.com/midnightLuke
+
+### License
+
+PHP Units Of Measure Bundle is licensed under the MIT License - see the LICENSE file for details.
