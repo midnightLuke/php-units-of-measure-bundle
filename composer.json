@@ -23,5 +23,8 @@
         "exclude-from-classmap": [
             "/Tests/"
         ]
+    },
+    "require-dev": {
+        "kint-php/kint": "^2.1"
     }
 }
