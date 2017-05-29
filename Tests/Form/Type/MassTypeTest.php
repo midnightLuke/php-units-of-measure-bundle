@@ -2,12 +2,9 @@
 
 namespace MidnightLuke\PhpUnitsOfMeasureBundle\Tests\Form\Type;
 
+use PhpUnitsOfMeasure\PhysicalQuantity\Mass;
+
 class MassTypeTest extends AbstractTypeTest
 {
     const TESTED_TYPE = 'MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\MassType';
-
-    public function testSubmitNull($expected = null, $norm = null, $view = null)
-    {
-        parent::testSubmitNull($expected, $norm, '');
-    }
 }
