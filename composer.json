@@ -17,7 +17,8 @@
         "doctrine/dbal": "^2.5"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.7 || ^6.1"
+        "phpunit/phpunit": "^5.7 || ^6.1",
+        "satooshi/php-coveralls": "^1.0"
     },
     "autoload": {
         "psr-4": {
