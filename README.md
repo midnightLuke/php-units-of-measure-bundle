@@ -1,5 +1,7 @@
 # PHP Units Of Measure Bundle
 
+[![Build Status](https://travis-ci.org/midnightLuke/php-units-of-measure-bundle.svg?branch=master)](https://travis-ci.org/midnightLuke/php-units-of-measure-bundle)
+
 Provides useful Doctrine and Form types for working with the 
 [PHP Units of Measure](https://github.com/PhpUnitsOfMeasure/php-units-of-measure)
 Library.
