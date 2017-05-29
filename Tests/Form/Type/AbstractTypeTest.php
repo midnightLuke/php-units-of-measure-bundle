@@ -10,6 +10,7 @@ abstract class AbstractTypeTest extends BaseTypeTest
 {
     public static $types = [
         Type\MassType::class => 'kg',
+        Type\LengthType::class => 'm',
     ];
 
     public function getExtensions()
