@@ -9,7 +9,8 @@ before_script:
   - composer install
 
 script:
+  - ./vendor/bin/php-cs-fix --dry-run
   - ./vendor/bin/phpunit
 
 after_script:
-  - php ./vendor/bin/coveralls
+  - ./vendor/bin/coveralls
