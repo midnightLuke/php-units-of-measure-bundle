@@ -51,6 +51,7 @@ abstract class AbstractPhysicalQuantityType extends Type
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
         $class = $this->getUnitClass();
+
         return new $class($value, $this->getStandardUnit());
     }
 
