@@ -1,8 +1,15 @@
 <?php
 
-namespace MidnightLuke\PhpUnitsOfMeasureBundle\Tests\Form\Type;
+/*
+ * This file is part of the MidnightLukePhpUnitsOfMeasureBundle package.
+ *
+ * (c) Luke Bainbridge <http://www.lukebainbridge.ca/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
-use PhpUnitsOfMeasure\PhysicalQuantity\Length;
+namespace MidnightLuke\PhpUnitsOfMeasureBundle\Tests\Form\Type;
 
 class LengthTypeTest extends AbstractTypeTest
 {

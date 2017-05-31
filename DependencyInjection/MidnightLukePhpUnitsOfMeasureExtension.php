@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the MidnightLukePhpUnitsOfMeasureBundle package.
+ *
+ * (c) Luke Bainbridge <http://www.lukebainbridge.ca/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace MidnightLuke\PhpUnitsOfMeasureBundle\DependencyInjection;
 
 use Doctrine\DBAL\Types\Type;
@@ -13,7 +22,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 /**
  * This is the class that loads and manages your bundle configuration.
  *
- * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
+ * @see http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
 class MidnightLukePhpUnitsOfMeasureExtension extends Extension implements PrependExtensionInterface
 {
@@ -61,7 +70,7 @@ class MidnightLukePhpUnitsOfMeasureExtension extends Extension implements Prepen
         $loader->load('services.xml');
 
         foreach (self::$types as $name => $doctrine_class) {
-            $def = $container->getDefinition('units_of_measure.form.type.' . $name);
+            $def = $container->getDefinition('units_of_measure.form.type.'.$name);
             $def->replaceArgument(0, $config['base_units'][$name]);
         }
     }
