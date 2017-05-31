@@ -18,8 +18,21 @@ use Symfony\Component\Form\Tests\Fixtures\TestExtension;
 abstract class AbstractTypeTest extends BaseTypeTest
 {
     public static $types = [
-        Type\MassType::class => 'kg',
+        Type\AccelerationType::class => 'm/s^2',
+        Type\AngleType::class => 'rad',
+        Type\AreaType::class => 'm^2',
+        Type\ElectricCurrentType::class => 'A',
+        Type\EnergyType::class => 'J',
         Type\LengthType::class => 'm',
+        Type\LuminousIntensityType::class => 'cd',
+        Type\MassType::class => 'kg',
+        Type\PressureType::class => 'Pa',
+        Type\QuantityType::class => 'mol',
+        Type\SolidAngleType::class => 'sr',
+        Type\TemperatureType::class => 'K',
+        Type\TimeType::class => 's',
+        Type\VelocityType::class => 'm/s',
+        Type\VolumeType::class => 'm^3',
     ];
 
     public function getExtensions()
