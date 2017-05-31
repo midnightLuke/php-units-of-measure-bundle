@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the MidnightLukePhpUnitsOfMeasureBundle package.
+ *
+ * (c) Luke Bainbridge <http://www.lukebainbridge.ca/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
@@ -50,8 +59,9 @@ abstract class AbstractPhysicalQuantityType extends Type
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {
-        if (!$value instanceof $this->getUnitClass()) {
-            throw new \Exception('Not an instance of ' . $this->getUnitClass());
+        $class = $this->getUnitClass();
+        if (!$value instanceof $class) {
+            throw new \Exception('Not an instance of '.$this->getUnitClass());
         }
 
         return $value->toUnit($this->getStandardUnit());
