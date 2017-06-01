@@ -55,9 +55,7 @@ abstract class AbstractTypeTest extends BaseTypeTest
 
         $tested_type = $this->getTestedType();
         $class = $tested_type::UNIT_CLASS;
-        $expected = new $class(0, self::$types[$this->getTestedType()]);
         $norm = $view = [
-            'value' => 0,
             'unit' => self::$types[$this->getTestedType()],
         ];
 
