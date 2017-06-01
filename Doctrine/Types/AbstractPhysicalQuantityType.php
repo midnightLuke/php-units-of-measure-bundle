@@ -55,6 +55,7 @@ abstract class AbstractPhysicalQuantityType extends Type
         }
 
         $class = $this->getUnitClass();
+
         return new $class($value, $this->getStandardUnit());
     }
 
