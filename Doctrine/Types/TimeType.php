@@ -17,7 +17,7 @@ class TimeType extends AbstractPhysicalQuantityType
 {
     const UNIT_CLASS = PhysicalQuantity\Time::class;
     const STANDARD_UNIT = 's';
-    const TYPE_NAME = 'time';
+    const TYPE_NAME = 'uom_time';
 
     /**
      * {@inheritdoc}

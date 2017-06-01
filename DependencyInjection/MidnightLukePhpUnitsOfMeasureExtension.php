@@ -27,21 +27,21 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class MidnightLukePhpUnitsOfMeasureExtension extends Extension implements PrependExtensionInterface
 {
     private static $types = [
-        'acceleration' => DoctrineTypes\AccelerationType::class,
-        'angle' => DoctrineTypes\AngleType::class,
-        'area' => DoctrineTypes\AreaType::class,
-        'electric_current' => DoctrineTypes\ElectricCurrentType::class,
-        'energy' => DoctrineTypes\EnergyType::class,
-        'length' => DoctrineTypes\LengthType::class,
-        'luminous_intensity' => DoctrineTypes\LuminousIntensityType::class,
-        'mass' => DoctrineTypes\MassType::class,
-        'pressure' => DoctrineTypes\PressureType::class,
-        'quantity' => DoctrineTypes\QuantityType::class,
-        'solid_angle' => DoctrineTypes\SolidAngleType::class,
-        'temperature' => DoctrineTypes\TemperatureType::class,
-        'time' => DoctrineTypes\TimeType::class,
-        'velocity' => DoctrineTypes\VelocityType::class,
-        'volume' => DoctrineTypes\VolumeType::class,
+        DoctrineTypes\AccelerationType::TYPE_NAME => DoctrineTypes\AccelerationType::class,
+        DoctrineTypes\AngleType::TYPE_NAME => DoctrineTypes\AngleType::class,
+        DoctrineTypes\AreaType::TYPE_NAME => DoctrineTypes\AreaType::class,
+        DoctrineTypes\ElectricCurrentType::TYPE_NAME => DoctrineTypes\ElectricCurrentType::class,
+        DoctrineTypes\EnergyType::TYPE_NAME => DoctrineTypes\EnergyType::class,
+        DoctrineTypes\LengthType::TYPE_NAME => DoctrineTypes\LengthType::class,
+        DoctrineTypes\LuminousIntensityType::TYPE_NAME => DoctrineTypes\LuminousIntensityType::class,
+        DoctrineTypes\MassType::TYPE_NAME => DoctrineTypes\MassType::class,
+        DoctrineTypes\PressureType::TYPE_NAME => DoctrineTypes\PressureType::class,
+        DoctrineTypes\QuantityType::TYPE_NAME => DoctrineTypes\QuantityType::class,
+        DoctrineTypes\SolidAngleType::TYPE_NAME => DoctrineTypes\SolidAngleType::class,
+        DoctrineTypes\TemperatureType::TYPE_NAME => DoctrineTypes\TemperatureType::class,
+        DoctrineTypes\TimeType::TYPE_NAME => DoctrineTypes\TimeType::class,
+        DoctrineTypes\VelocityType::TYPE_NAME => DoctrineTypes\VelocityType::class,
+        DoctrineTypes\VolumeType::TYPE_NAME => DoctrineTypes\VolumeType::class,
     ];
 
     /**

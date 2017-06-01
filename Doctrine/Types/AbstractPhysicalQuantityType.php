@@ -50,8 +50,11 @@ abstract class AbstractPhysicalQuantityType extends Type
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
-        $class = $this->getUnitClass();
+        if ($value === null) {
+            return null;
+        }
 
+        $class = $this->getUnitClass();
         return new $class($value, $this->getStandardUnit());
     }
 
@@ -60,6 +63,10 @@ abstract class AbstractPhysicalQuantityType extends Type
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {
+        if ($value === null) {
+            return null;
+        }
+
         $class = $this->getUnitClass();
         if (!$value instanceof $class) {
             throw new \Exception('Not an instance of '.$this->getUnitClass());

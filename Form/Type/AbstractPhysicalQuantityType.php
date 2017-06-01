@@ -68,10 +68,7 @@ abstract class AbstractPhysicalQuantityType extends AbstractType
         $builder->addModelTransformer(new CallbackTransformer(
             function ($value) use ($standard_unit) {
                 if ($value === null) {
-                    return [
-                        'value' => 0,
-                        'unit' => $standard_unit,
-                    ];
+                    return null;
                 }
 
                 return [
@@ -80,6 +77,10 @@ abstract class AbstractPhysicalQuantityType extends AbstractType
                 ];
             },
             function ($value) use ($unit_class) {
+                if ($value === null || !isset($value['value'])) {
+                    return null;
+                }
+
                 return new $unit_class($value['value'], $value['unit']);
             }
         ));

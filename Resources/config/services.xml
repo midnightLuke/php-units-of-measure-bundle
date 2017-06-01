@@ -52,7 +52,7 @@
             <argument></argument>
             <tag name="form.type" />
         </service>
-        <service id="units_of_measure.form.type.time" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\TimeType">
+        <service id="units_of_measure.form.type.uom_time" class="MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type\TimeType">
             <argument></argument>
             <tag name="form.type" />
         </service>
