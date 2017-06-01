@@ -1,15 +1,24 @@
 <?php
 
+/*
+ * This file is part of the MidnightLukePhpUnitsOfMeasureBundle package.
+ *
+ * (c) Luke Bainbridge <http://www.lukebainbridge.ca/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 use Doctrine\DBAL\Types\Type;
 use MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types;
 
 // Doctrine test bootstrap nonsense.
-if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
-    $classLoader = require __DIR__ . '/../vendor/autoload.php';
-    $classLoader->add('Doctrine\\Tests\\', __DIR__ . '/../vendor/doctrine/dbal/tests/');
-} elseif (file_exists(__DIR__ . '/../../../autoload.php')) {
-    $classLoader = require __DIR__ . '/../../../autoload.php';
-    $classLoader->add('Doctrine\\Tests\\', __DIR__ . '/../../doctrine/dbal/tests/');
+if (file_exists(__DIR__.'/../vendor/autoload.php')) {
+    $classLoader = require __DIR__.'/../vendor/autoload.php';
+    $classLoader->add('Doctrine\\Tests\\', __DIR__.'/../vendor/doctrine/dbal/tests/');
+} elseif (file_exists(__DIR__.'/../../../autoload.php')) {
+    $classLoader = require __DIR__.'/../../../autoload.php';
+    $classLoader->add('Doctrine\\Tests\\', __DIR__.'/../../doctrine/dbal/tests/');
 } else {
     throw new Exception('Can\'t find autoload.php. Did you install dependencies via Composer?');
 }
