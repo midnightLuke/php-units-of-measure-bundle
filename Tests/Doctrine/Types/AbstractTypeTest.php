@@ -60,4 +60,10 @@ abstract class AbstractTypeTest extends \Doctrine\Tests\DbalTestCase
     {
         $this->assertNull($this->type->convertToDatabaseValue(null, $this->platform));
     }
+
+    public function testGetTypeName()
+    {
+        $type_class = $this->getTypeClass();
+        $this->assertEquals($type_class::TYPE_NAME, $this->type->getTypeName());
+    }
 }
