@@ -48,6 +48,16 @@ abstract class AbstractTypeTest extends BaseTypeTest
         return $extensions;
     }
 
+    public function testSubmitPhysicalQuantity()
+    {
+        $tested_type = $this->getTestedType();
+        $class = $tested_type::UNIT_CLASS;
+        $expected = new $class(5, self::$types[$tested_type]);
+        $form = $this->factory->create($this->getTestedType());
+        $form->submit(['value' => 5, 'unit' => self::$types[$tested_type]]);
+        $this->assertEquals($expected, $form->getData());
+    }
+
     public function testSubmitNull($expected = null, $norm = null, $view = null)
     {
         $form = $this->factory->create($this->getTestedType());
