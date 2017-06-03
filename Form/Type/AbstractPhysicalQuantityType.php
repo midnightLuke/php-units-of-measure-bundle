@@ -14,7 +14,7 @@ namespace MidnightLuke\PhpUnitsOfMeasureBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 abstract class AbstractPhysicalQuantityType extends AbstractType
@@ -56,7 +56,7 @@ abstract class AbstractPhysicalQuantityType extends AbstractType
 
         // Build form element.
         $builder
-            ->add('value', IntegerType::class, [
+            ->add('value', NumberType::class, [
                 'empty_data' => 0,
             ])
             ->add('unit', ChoiceType::class, [
