@@ -54,6 +54,8 @@ abstract class AbstractTypeTest extends \Doctrine\Tests\DbalTestCase
         $expected = 5.5;
         $actual = $this->type->convertToDatabaseValue($length, $this->platform);
         $this->assertEquals($expected, $actual);
+        $this->expectException(\Exception::class);
+        $this->type->convertToDatabaseValue(new \stdclass(), $this->platform);
     }
 
     public function testNullConvertToDatabaseValue()
@@ -65,5 +67,11 @@ abstract class AbstractTypeTest extends \Doctrine\Tests\DbalTestCase
     {
         $type_class = $this->getTypeClass();
         $this->assertEquals($type_class::TYPE_NAME, $this->type->getTypeName());
+        $this->assertEquals($type_class::TYPE_NAME, $this->type->getName());
+    }
+
+    public function testGetSQLDeclaration()
+    {
+        $this->assertEquals($this->type->getSQLDeclaration([], $this->platform), "NUMERIC(10, 0)");
     }
 }
