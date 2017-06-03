@@ -72,6 +72,6 @@ abstract class AbstractTypeTest extends \Doctrine\Tests\DbalTestCase
 
     public function testGetSQLDeclaration()
     {
-        $this->assertEquals($this->type->getSQLDeclaration([], $this->platform), "NUMERIC(10, 0)");
+        $this->assertEquals($this->type->getSQLDeclaration([], $this->platform), 'NUMERIC(10, 0)');
     }
 }
