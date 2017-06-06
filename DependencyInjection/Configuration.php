@@ -45,7 +45,7 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('quantity')->defaultValue('mol')->end()
                         ->scalarNode('solid_angle')->defaultValue('sr')->end()
                         ->scalarNode('temperature')->defaultValue('K')->end()
-                        ->scalarNode('time')->defaultValue('s')->end()
+                        ->scalarNode('uom_time')->defaultValue('s')->end()
                         ->scalarNode('velocity')->defaultValue('m/s')->end()
                         ->scalarNode('volume')->defaultValue('m^3')->end()
                     ->end()
