@@ -20,6 +20,7 @@ Add it to your application kernel (AppKernel.php):
 ```php
 class AppKernel extends Kernel
 {
+    [...]
     public function registerBundles()
     {
         $bundles = [
@@ -27,8 +28,8 @@ class AppKernel extends Kernel
             new MidnightLuke\PhpUnitsOfMeasureBundle\MidnightLukePhpUnitsOfMeasureBundle(),
         ];
     }
+    [...]
 }
-[...]
 ```
 
 ## Configuration
@@ -52,7 +53,7 @@ units_of_measure:
         quantity:             mol
         solid_angle:          sr
         temperature:          K
-        time:                 s
+        uom_time:             s
         velocity:             m/s
         volume:               m^3
 ```
@@ -67,7 +68,8 @@ forms.
 ### Doctrine Use
 
 ```php
-class Person{
+class Person
+{
     [...]
     /**
      * @ORM\Column(type="length")
