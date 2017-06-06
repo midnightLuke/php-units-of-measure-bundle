@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the MidnightLukePhpUnitsOfMeasureBundle package.
+ *
+ * (c) Luke Bainbridge <http://www.lukebainbridge.ca/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace MidnightLuke\PhpUnitsOfMeasureBundle\Tests\DependencyInjection;
 
 abstract class AbstractDependencyInjectionTest extends \PHPUnit_Framework_TestCase
@@ -12,7 +21,7 @@ abstract class AbstractDependencyInjectionTest extends \PHPUnit_Framework_TestCa
      */
     protected function assertDICDefinitionClass($definition, $expectedClass)
     {
-        $this->assertEquals($expectedClass, $definition->getClass(), "Expected Class of the DIC Container Service Definition is wrong.");
+        $this->assertEquals($expectedClass, $definition->getClass(), 'Expected Class of the DIC Container Service Definition is wrong.');
     }
 
     protected function assertDICConstructorArguments($definition, $args)
