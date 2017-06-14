@@ -20,15 +20,15 @@ Add it to your application kernel (AppKernel.php):
 ```php
 class AppKernel extends Kernel
 {
-    [...]
+    // [...]
     public function registerBundles()
     {
         $bundles = [
-            [...]
+            // [...]
             new MidnightLuke\PhpUnitsOfMeasureBundle\MidnightLukePhpUnitsOfMeasureBundle(),
         ];
     }
-    [...]
+    // [...]
 }
 ```
 
@@ -70,13 +70,13 @@ forms.
 ```php
 class Person
 {
-    [...]
+    // [...]
     /**
      * @ORM\Column(type="length")
      * @var Length
      */
     private $height;
-    [...]
+    // [...]
 }
 ```
 
