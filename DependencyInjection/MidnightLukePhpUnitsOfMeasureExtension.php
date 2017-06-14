@@ -15,7 +15,6 @@ use Doctrine\DBAL\Types\Type;
 use MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types as DoctrineTypes;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
@@ -24,9 +23,9 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  *
  * @see http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class MidnightLukePhpUnitsOfMeasureExtension extends Extension implements PrependExtensionInterface
+class MidnightLukePhpUnitsOfMeasureExtension extends Extension
 {
-    private static $types = [
+    public static $types = [
         DoctrineTypes\AccelerationType::TYPE_NAME => DoctrineTypes\AccelerationType::class,
         DoctrineTypes\AngleType::TYPE_NAME => DoctrineTypes\AngleType::class,
         DoctrineTypes\AreaType::TYPE_NAME => DoctrineTypes\AreaType::class,
@@ -43,20 +42,6 @@ class MidnightLukePhpUnitsOfMeasureExtension extends Extension implements Prepen
         DoctrineTypes\VelocityType::TYPE_NAME => DoctrineTypes\VelocityType::class,
         DoctrineTypes\VolumeType::TYPE_NAME => DoctrineTypes\VolumeType::class,
     ];
-
-    /**
-     * {@inheritdoc}
-     */
-    public function prepend(ContainerBuilder $container)
-    {
-        foreach (self::$types as $name => $doctrine_class) {
-            if (Type::hasType($name)) {
-                Type::overrideType($name, $doctrine_class);
-            } else {
-                Type::addType($name, $doctrine_class);
-            }
-        }
-    }
 
     /**
      * {@inheritdoc}
