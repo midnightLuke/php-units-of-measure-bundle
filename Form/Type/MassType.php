@@ -24,4 +24,12 @@ class MassType extends AbstractPhysicalQuantityType
     {
         return self::UNIT_CLASS;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBlockPrefix()
+    {
+        return 'mass';
+    }
 }
