@@ -12,19 +12,7 @@
 namespace MidnightLuke\PhpUnitsOfMeasureBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use MidnightLuke\PhpUnitsOfMeasureBundle\DependencyInjection\MidnightLukePhpUnitsOfMeasureExtension;
-use Doctrine\DBAL\Types\Type;
 
 class MidnightLukePhpUnitsOfMeasureBundle extends Bundle
 {
-    public function __construct()
-    {
-        foreach (MidnightLukePhpUnitsOfMeasureExtension::$types as $name => $doctrine_class) {
-            if (Type::hasType($name)) {
-                Type::overrideType($name, $doctrine_class);
-            } else {
-                Type::addType($name, $doctrine_class);
-            }
-        }
-    }
 }
