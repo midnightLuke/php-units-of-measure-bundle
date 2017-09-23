@@ -35,7 +35,7 @@ abstract class AbstractDependencyInjectionTest extends \PHPUnit_Framework_TestCa
         if (isset($calls[$pos][0])) {
             $this->assertEquals($methodName, $calls[$pos][0], "Method '".$methodName."' is expected to be called at position $pos.");
 
-            if ($params !== null) {
+            if (null !== $params) {
                 $this->assertEquals($params, $calls[$pos][1], "Expected parameters to methods '".$methodName."' do not match the actual parameters.");
             }
         } else {
