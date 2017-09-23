@@ -24,4 +24,12 @@ class QuantityType extends AbstractPhysicalQuantityType
     {
         return self::UNIT_CLASS;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBlockPrefix()
+    {
+        return 'quantity';
+    }
 }

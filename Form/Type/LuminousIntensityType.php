@@ -24,4 +24,12 @@ class LuminousIntensityType extends AbstractPhysicalQuantityType
     {
         return self::UNIT_CLASS;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBlockPrefix()
+    {
+        return 'luminous_intensity';
+    }
 }

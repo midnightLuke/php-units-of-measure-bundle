@@ -24,4 +24,12 @@ class TimeType extends AbstractPhysicalQuantityType
     {
         return self::UNIT_CLASS;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBlockPrefix()
+    {
+        return 'uom_time';
+    }
 }
