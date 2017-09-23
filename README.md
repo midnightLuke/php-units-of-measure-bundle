@@ -32,6 +32,29 @@ class AppKernel extends Kernel
 }
 ```
 
+Add the form types you need to doctrine in config.yml:
+
+```yaml
+doctrine:
+    dbal:
+        types:
+            acceleration:         MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\AccelerationType
+            angle:                MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\AngleType
+            area:                 MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\AreaType
+            electric_current:     MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\ElectricCurrentType
+            energy:               MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\EnergyType
+            length:               MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\LengthType
+            luminous_intensity:   MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\LuminousIntensityType
+            mass:                 MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\MassType
+            pressure:             MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\PressureType
+            quantity:             MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\QuantityType
+            solid_angle:          MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\SolidAngleType
+            temperature:          MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\TemperatureType
+            uom_time:             MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\TimeType
+            velocity:             MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\VelocityType
+            volume:               MidnightLuke\PhpUnitsOfMeasureBundle\Doctrine\Types\VolumeType
+```
+
 ## Configuration
 
 This bundle comes with configuration that allows you to specify the "default"
