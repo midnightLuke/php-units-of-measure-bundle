@@ -12,8 +12,8 @@
     "require": {
         "php": "^5.5.9 || ^7.0",
         "php-units-of-measure/php-units-of-measure": "^2.1",
-        "symfony/form": "^2.7 || ^3.0",
-        "symfony/framework-bundle": "^2.7 || ^3.0",
+        "symfony/form": "^2.7 || ^3.0 || ^4.0",
+        "symfony/framework-bundle": "^2.7 || ^3.0 || ^4.0",
         "doctrine/dbal": "^2.5"
     },
     "require-dev": {
