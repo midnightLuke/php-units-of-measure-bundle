@@ -57,7 +57,7 @@ abstract class AbstractPhysicalQuantityType extends AbstractType
         // Build form element.
         $builder
             ->add('value', NumberType::class, [
-                'empty_data' => 0,
+                'required' => false,
             ])
             ->add('unit', ChoiceType::class, [
                 'choices' => $unit_choices,
