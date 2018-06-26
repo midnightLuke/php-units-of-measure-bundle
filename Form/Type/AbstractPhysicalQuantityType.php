@@ -62,6 +62,7 @@ abstract class AbstractPhysicalQuantityType extends AbstractType
             ->add('unit', ChoiceType::class, [
                 'choices' => $unit_choices,
                 'empty_data' => $this->standard_unit,
+                'translation_domain' => false,
             ]);
 
         // Simple callback transformer for going back and forth.
