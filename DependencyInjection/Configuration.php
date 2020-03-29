@@ -26,10 +26,9 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('units_of_measure');
+        $treeBuilder = new TreeBuilder('units_of_measure');
 
-        $rootNode
+        $treeBuilder->getRootNode()
             ->children()
                 ->arrayNode('base_units')->addDefaultsIfNotSet()
                     ->children()
